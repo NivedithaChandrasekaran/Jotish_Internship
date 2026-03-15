@@ -178,7 +178,12 @@ onChange={(e) => setEmail(e.target.value)}
             )}
           </div>
           <div className="flex gap-4">
-            {!capturedImg ? <button onClick={startCamera} className="flex-1 bg-blue-600 text-white py-3 rounded-xl font-bold">Start Camera</button> : <button onClick={() => {setCapturedImg(null); setHasSignature(false);}} className="flex-1 border py-3 rounded-xl">Retake</button>}
+            {!capturedImg ? <button>
+onClick={() => {setCapturedImg(null); setHasSignature(false);}}
+className="flex-1 border border-slate-300 py-3 rounded-xl text-slate-800 font-semibold hover:bg-slate-100 transition"
+>
+Retake
+</button>}
             {stream && !capturedImg && (
               <button onClick={() => {
                 const canvas = document.createElement('canvas'); canvas.width = 640; canvas.height = 480;
