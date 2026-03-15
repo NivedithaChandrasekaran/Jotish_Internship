@@ -178,10 +178,9 @@ onChange={(e) => setEmail(e.target.value)}
             )}
           </div>
           <div className="flex gap-4">
-            {!capturedImg ? <button>
+            {!capturedImg ? <button
 onClick={() => {setCapturedImg(null); setHasSignature(false);}}
-className="flex-1 border border-slate-300 py-3 rounded-xl text-slate-800 font-semibold hover:bg-slate-100 transition"
->
+className="flex-1 border border-slate-300 py-3 rounded-xl text-slate-800 font-semibold hover:bg-slate-100 transition">
 Retake
 </button>}
             {stream && !capturedImg && (
